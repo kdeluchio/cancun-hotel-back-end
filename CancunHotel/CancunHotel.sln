@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancunHotel.WebApi", "CancunHotel.WebApi\CancunHotel.WebApi.csproj", "{020B4917-50A6-4031-B3EA-7BD4CD9763D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-WebApi", "1-WebApi", "{02ADD601-D20F-4277-8827-EC9DF43EB57E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{45D2C4CA-FDEF-40D8-A387-51ECFBE7F0A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{DEBDAAE8-473A-4EF6-A838-44A3B0D87424}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{033507CF-F5BA-49F8-80B2-63CC233A9124}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancunHotel.Application", "CancunHotel.Application\CancunHotel.Application.csproj", "{6E769004-3A90-4248-B5C6-9F4F3EB4BB78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancunHotel.Domain", "CancunHotel.Domain\CancunHotel.Domain.csproj", "{0720FB57-D328-4FAD-95FA-F5D34955F6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancunHotel.Data", "CancunHotel.Data\CancunHotel.Data.csproj", "{85DC007F-A49C-4B6D-9A2C-9CADFAF03A09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancunHotel.CrossCutting", "CancunHotel.CrossCutting\CancunHotel.CrossCutting.csproj", "{393EDF1D-757C-4C99-9CE1-34805AE8E459}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{020B4917-50A6-4031-B3EA-7BD4CD9763D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020B4917-50A6-4031-B3EA-7BD4CD9763D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020B4917-50A6-4031-B3EA-7BD4CD9763D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020B4917-50A6-4031-B3EA-7BD4CD9763D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E769004-3A90-4248-B5C6-9F4F3EB4BB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E769004-3A90-4248-B5C6-9F4F3EB4BB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E769004-3A90-4248-B5C6-9F4F3EB4BB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E769004-3A90-4248-B5C6-9F4F3EB4BB78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0720FB57-D328-4FAD-95FA-F5D34955F6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0720FB57-D328-4FAD-95FA-F5D34955F6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0720FB57-D328-4FAD-95FA-F5D34955F6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0720FB57-D328-4FAD-95FA-F5D34955F6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85DC007F-A49C-4B6D-9A2C-9CADFAF03A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85DC007F-A49C-4B6D-9A2C-9CADFAF03A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85DC007F-A49C-4B6D-9A2C-9CADFAF03A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85DC007F-A49C-4B6D-9A2C-9CADFAF03A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393EDF1D-757C-4C99-9CE1-34805AE8E459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393EDF1D-757C-4C99-9CE1-34805AE8E459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393EDF1D-757C-4C99-9CE1-34805AE8E459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393EDF1D-757C-4C99-9CE1-34805AE8E459}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{020B4917-50A6-4031-B3EA-7BD4CD9763D9} = {02ADD601-D20F-4277-8827-EC9DF43EB57E}
+		{6E769004-3A90-4248-B5C6-9F4F3EB4BB78} = {45D2C4CA-FDEF-40D8-A387-51ECFBE7F0A5}
+		{0720FB57-D328-4FAD-95FA-F5D34955F6CC} = {DEBDAAE8-473A-4EF6-A838-44A3B0D87424}
+		{85DC007F-A49C-4B6D-9A2C-9CADFAF03A09} = {033507CF-F5BA-49F8-80B2-63CC233A9124}
+		{393EDF1D-757C-4C99-9CE1-34805AE8E459} = {033507CF-F5BA-49F8-80B2-63CC233A9124}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D51D890E-511D-4503-9C88-DE1B419F6ED8}
+	EndGlobalSection
+EndGlobal
