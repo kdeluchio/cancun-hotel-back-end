@@ -76,7 +76,7 @@ namespace CancunHotel.WebApi.Controllers
 
         [Authorize]
         [HttpPatch("cancel")]
-        public async Task<IActionResult> Cancel(Guid id)
+        public async Task<IActionResult> Cancel([FromQuery]Guid id)
         {
             if (!ModelState.IsValid)
                 return BadRequest();

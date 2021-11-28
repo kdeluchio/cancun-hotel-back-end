@@ -15,3 +15,7 @@ Visual Studio 2019, .Net Core 3, language C#, ORM Entity Framework Core 3.1, Mic
 5 - In this folder execute the command "dotnet ef database update" to create database;</br>
 6 - If the step 5 failed, you may need to install ef tools then run this command "dotnet tool install --global dotnet-ef --version 5.0.0 " ;</br>
 7 - Play.</br>
+8 - You can create rooms by swagger or run the following Sql command. INSERT INTO room (Id, Number, Floor, Description, CreatedIn) VALUES (NEWID(), '311', '3', 'Suite North', getdate()); </br>
+
+  
+

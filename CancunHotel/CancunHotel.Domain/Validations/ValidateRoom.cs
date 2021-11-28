@@ -32,7 +32,7 @@ namespace CancunHotel.Domain.Validations
 
         public async Task ValidateOnUpdate(Room model)
         {
-            if (await _roomRepository.GetByIdAsync(model.Id) == null)
+            if (model == null || await _roomRepository.GetByIdAsync(model.Id) == null)
                 throw new RoulesException(HttpStatusCode.NotFound, "This room is not exists.");
 
             var counter = await _roomRepository.CountRooms(model.Number, model.Floor, model.Id);

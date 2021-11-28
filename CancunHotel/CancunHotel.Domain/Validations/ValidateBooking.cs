@@ -44,16 +44,16 @@ namespace CancunHotel.Domain.Validations
             if (model.CheckIn.Date < DateTime.Now.Date)
                 throw new RoulesException(HttpStatusCode.Conflict, "Invalid checkin date.");
 
-            if ((DateTime.Now.Date - model.CheckIn.Date).TotalDays > 30)
+            if (Math.Abs((DateTime.Now.Date - model.CheckIn.Date).TotalDays) > 30)
                 throw new RoulesException(HttpStatusCode.Conflict, "It cannot be booked more than 30 days in advance.");
 
-            if (!await _bookingRepository.IsAvailableDate(model.CheckIn, model.CheckOut, model.RoomId))
-                throw new RoulesException(HttpStatusCode.Conflict, string.Format("Dates between {0} and {1} are not available.", model.CheckIn, model.CheckOut));
+            if (!await _bookingRepository.IsAvailableDate(model.CheckIn.Date, model.CheckOut.Date, model.RoomId))
+                throw new RoulesException(HttpStatusCode.Conflict, string.Format("Dates between {0} and {1} are not available.", model.CheckIn.Date, model.CheckOut.Date));
         }
 
         public async Task ValidateOnCancel(Booking model)
         {
-            if (await _bookingRepository.GetByIdAsync(model.Id) == null)
+            if (model == null || await _bookingRepository.GetByIdAsync(model.Id) == null)
                 throw new RoulesException(HttpStatusCode.Conflict, "Booking was not founded.");
 
             if (model.CheckIn.Date <= DateTime.Now.Date)
@@ -70,7 +70,7 @@ namespace CancunHotel.Domain.Validations
 
         public async Task ValidateOnUpdate(Booking model)
         {
-            if (await _bookingRepository.GetByIdAsync(model.Id) == null)
+            if (model == null || await _bookingRepository.GetByIdAsync(model.Id) == null)
                 throw new RoulesException(HttpStatusCode.Conflict, "Booking was not founded.");
 
             var userAccess = Convert.ToInt32(_managementToken.ReadClaim(Enums.TokenClaims.UserAccess));
@@ -90,11 +90,11 @@ namespace CancunHotel.Domain.Validations
             if (model.CheckIn.Date < DateTime.Now.Date)
                 throw new RoulesException(HttpStatusCode.Conflict, "Invalid checkin date.");
 
-            if ((DateTime.Now.Date - model.CheckIn.Date).TotalDays > 30)
+            if (Math.Abs((DateTime.Now.Date - model.CheckIn.Date).TotalDays) > 30)
                 throw new RoulesException(HttpStatusCode.Conflict, "It cannot be booked more than 30 days in advance.");
 
-            if (!await _bookingRepository.IsAvailableDate(model.CheckIn, model.CheckOut, model.RoomId, model.Id))
-                throw new RoulesException(HttpStatusCode.Conflict, string.Format("Dates between {0} and {1} are not available.", model.CheckIn, model.CheckOut));
+            if (!await _bookingRepository.IsAvailableDate(model.CheckIn.Date, model.CheckOut.Date, model.RoomId, model.Id))
+                throw new RoulesException(HttpStatusCode.Conflict, string.Format("Dates between {0} and {1} are not available.", model.CheckIn.Date, model.CheckOut.Date));
 
         }
     

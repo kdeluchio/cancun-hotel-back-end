@@ -9,6 +9,7 @@ namespace CancunHotel.Application.ViewModels
         public Guid Id { get; set; }
 
         public Guid RoomId { get; set; }
+        public string RoomName { get => "Room number: " + Room?.Number + "| " + Room?.Description; }
 
         public RoomVM Room { get; set; }
 

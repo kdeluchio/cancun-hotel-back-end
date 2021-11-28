@@ -20,6 +20,7 @@ namespace CancunHotel.Data.Repository
             var bookings = await DbSet.Include(x => x.Room)
                                       .Include(x => x.Customer)
                                       .Where(x => x.CustomerId == customerId)
+                                      .OrderByDescending(x => x.CheckIn)
                                       .ToListAsync();
 
             return bookings.AsQueryable();
@@ -32,6 +33,7 @@ namespace CancunHotel.Data.Repository
                                       .Where(x => x.CheckIn.Date >= DateTime.Now.Date 
                                                && !x.Cancelled
                                                && x.RoomId == roomId)
+                                      .OrderBy(x => x.CheckIn)
                                       .ToListAsync();
 
             return bookings.AsQueryable();
